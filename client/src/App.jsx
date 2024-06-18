@@ -10,11 +10,11 @@ import SignUp from './pages/SignUp'
 // Components
 import Header from './components/Header'
 
-
-
 export default function App() {
   return (
+    // BrowserRouter includes Components, such as Header, and Routes.
     <BrowserRouter>
+    {/* Global Components will outside of the Routes. */}
     <Header/>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
@@ -27,3 +27,5 @@ export default function App() {
     </BrowserRouter>
   )
 }
+
+

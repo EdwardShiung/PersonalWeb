@@ -33,9 +33,9 @@ export default function Header() {
                 <FaMoon></FaMoon>
             </Button>
             <Link to='/sign-in'>
-                <Button gradientDuoTone='OrangeToYellow'>Sign In</Button>
+                <Button gradientDuoTone='purpleToBlue' outline>Sign In</Button>
             </Link>
-            
+
             {/* Navbar.Toggle should work with below Navbar.Collapse */}
             <Navbar.Toggle/>
         </div>
