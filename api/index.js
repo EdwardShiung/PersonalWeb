@@ -1,12 +1,10 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import userRoutes from './routes/user.route.js';
 
 dotenv.config();
 
-//Below it's for local MongoDB
-// mongoose.connect('mongodb://localhost:27017/express-mongo', {})
-// Connect the MongoDB Cloud
 mongoose.connect(process.env.MONGOURL)
         .then(() => {
             console.log("MongoDB is connected!")
@@ -21,5 +19,15 @@ const app = express();
 app.listen(3000, ()=>{
     console.log('Server is listening on 3000.');
 })
+
+
+//Add the Route
+app.use('/api/user', userRoutes);
+
+
+
+
+
+
 
 
